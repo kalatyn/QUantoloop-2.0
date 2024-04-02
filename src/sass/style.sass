@@ -1,0 +1,399 @@
+@import "normalizes.scss"
+@import "resets.scss"
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+body
+    font-family: 'DM sans', sans-serif
+    margin: 0 auto
+    background-color: black
+    
+    
+
+
+.hero_section
+    height: 100vh
+    width: 100%
+
+.video_wrapper
+    position: relative
+    width: 100%
+    height: 100vh
+    overflow: hidden
+    min-height: 50%
+    z-index: -1
+    display: flex
+    justify-content: space-around
+    align-items: center
+    flex-wrap: wrap
+
+.layout
+    position: absolute
+    width: 100%
+    height: 100vh
+    left: 0
+    top: 0
+    background: rgba(0, 0, 0, 0.6)
+
+.video_backgroud
+    
+    height: 100vh
+    width: 100vw
+    position: absolute
+    top: 0
+    left: 0
+    z-index: -1
+    object-fit: cover
+
+
+
+.main_logo
+    width: 40vw
+    min-width: 400px
+    z-index: 1
+    
+
+.slogen
+    color: white
+    font-weight: 900
+    font-size: 6em
+    position: relative
+    
+    margin-top: 150px
+    
+
+@media screen and ( max-width: 1086px )
+    .slogen
+        font-size: 5em
+        text-align: center top
+        
+    .video_wrapper
+        justify-content: center
+
+@media screen and ( max-width: 947px )
+    .slogen
+        font-size: 4em
+        text-align: center top
+        
+    .video_wrapper
+        justify-content: center
+
+@media screen and ( max-width: 841px )
+    .slogen
+        font-size: 3em
+        text-align: center top
+        
+    .video_wrapper
+        justify-content: center
+
+@media screen and ( max-width: 734px )
+    .slogen
+        font-size: 2em
+        text-align: center top
+        
+    .video_wrapper
+        justify-content: center
+
+
+
+        
+@media screen and ( max-width: 636px )
+    .slogen
+        font-size: 10vw
+        text-align: center
+        bottom: 150px
+    .video_wrapper
+        justify-content: center
+        
+        
+
+.cardfield
+    position: relative
+    min-height: 100vh
+    max-width: 100vw
+    margin: 0 auto
+    background-color: black
+    display: flex
+    // padding: 5% 0 5% 0
+    // flex-direction: row
+    justify-content: center
+    align-items: center
+    
+@media ( max-width: 1440px )
+    .cardfield
+        max-width: 1200px
+    
+
+@media ( max-width: 1261px )
+    .cardfield
+        max-width: 980px
+    
+
+@media ( max-width: 980px )
+    .cardfield
+        flex-direction: column
+    .card
+        margin: 2.5%
+    
+
+ 
+
+.card
+    width:  auto
+    
+    height: 500px
+    // border: 3px white solid
+    border-radius: 45px
+    overflow: hidden
+    box-shadow: 0 0 50px rgba(251, 138, 79, 0.7)
+    -webkit-box-shadow: 0 0 50px rgba(251, 138, 79, 0.7)
+    transition: all 0.8s ease 0s
+    margin: 2.5%
+
+
+
+.card:hover
+    box-shadow: 0 0 75px rgba(251, 138, 79, 1)
+    -webkit-box-shadow: 0 0 75px rgba(251, 138, 79, 1)
+    transform: scale(1.03) 
+    
+
+.card__top
+    position: relative
+    max-height: 33.33%
+    width: 100%
+    overflow: hidden
+    
+
+.card__pic
+    object-position: center
+    object-fit: cover
+    width: 100%
+    height: 100%
+
+
+.card__bottom
+    position: relative
+    width: 100%
+    height: 75%
+    background-color: #f18a4f
+    background-image: linear-gradient(315deg, #f18a4f 0%, #ffcf53 79%)
+    
+    
+
+
+.card__circle
+    height: 180px
+    width: 180px
+    position: absolute
+    border-radius: 50%
+    overflow: hidden
+    object-position: center
+    left: calc( 50% - 90px )
+    bottom: calc( 100% - 90px )
+
+    // position: absolute
+    
+    // height: auto
+    // width: 33%
+    // max-width: 180px
+    // border-radius: 50%
+    // overflow: hidden
+    // transform: translate(-50% -50%)
+    // left: 33.33%
+    // bottom: 80%
+    
+
+.circle__pic
+    object-fit: cover
+    height: 100%
+
+.card__text
+    font-size: 26px
+    font-weight: 700
+    text-align: center
+    line-height: 1.7
+    position: rabsolute
+    padding: 100px 25px 25px 25px
+
+
+
+.timeline__area
+    width: 100%
+    height: 100vh
+    position: relative
+    background-color: white
+    display: flex
+    align-items: center
+    justify-content: center
+
+
+// .timeline__item
+//     font-size: 50px
+//     color: white
+//     font-weight: 700
+//     line-height: 2.5
+//     text-shadow: 0px 0px 10px rgba(251, 186, 5, 0.704)
+//     height: 150px
+//     width: 200px
+//     border: 1px solid white
+
+// .timeline__item:hover
+//     font-size: 52px 
+    
+
+// .timeline__item:hover:before
+//     height: 42px
+//     width: 42px
+//     background-size: 27px 27px
+
+// .timeline__item:before
+//     content: ""
+//     background-image: url('/src/icons/check-lg.svg')
+//     background-size: 25px 25px
+//     background-position: center
+//     background-repeat: no-repeat
+//     height: 40px
+//     width: 40px
+//     border-radius: 50%
+//     background-color: orange
+//     box-shadow: -2px 2px 4px orange
+//     -webkit-box-shadow: -2px 2px 4px orange
+//     display: inline-block
+//     margin-right: 250px
+    
+
+
+.timeline__arrow
+    width: 3px
+    height: 100%
+    background: #ebebeb
+    // box-shadow: -2px 2px 6px rgb(182, 182, 180)
+    // -webkit-box-shadow: -2px 2px 6px rgb(167, 168, 165)
+    border-radius: 10px
+    position: absolute
+    left: 6px
+    top: 0
+
+    
+    
+    
+
+.timeline__arrow:after
+    content: ''
+    color: rgba(212, 250, 59, 0.7)
+    width: 10px
+    height: 10px
+
+
+
+
+// .timeline__items
+//     position: absolute
+//     left: calc( 20% - 15px )
+//     top: calc(12.5% - 60px)
+
+// .arrow
+//     height: 100%
+//     width: 100%
+//     background-color: red
+
+.timeline__items
+    // height: auto
+    // width: auto
+    display: flex
+    flex-direction: column
+    // border: 1px solid white
+    position: absolute
+    left: 14.7%
+    top: 9%
+    padding: 30px 0px 0px 0px 
+    justify-content: center
+    
+    
+.timeline__items__container
+    height: auto
+    width: auto
+    display: flex
+    align-items: center
+    margin-bottom: 40px
+    
+    
+    
+.timeline__items__container:before
+    content: ""
+    
+    background-size: 8px 8px
+    background-position: center
+    background-repeat: no-repeat
+    height: 15px
+    width: 15px
+    border-radius: 50%
+    background-color: rgb(248, 195, 79)
+    margin-right: 40px
+    position: relative
+    
+    
+
+
+
+.timeline__item
+    height: 90px
+    width: 290px
+    border: 1px solid white
+    border-radius: 10px
+    background-color: rgba(255, 255, 255, 0.995)
+    -webkit-box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125)
+    box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125)
+    border: 1px solid #ebebeb
+    padding: 30px 30px 25px 30px
+    margin-right: 40px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    transition: all 0.4s ease 0s
+
+.timeline__item:hover
+    box-shadow: 0 0.25rem 1rem 0.5rem rgba(47, 91, 234, 0.125)
+    transform: scale(1.02)
+
+.timeline__item__logo
+    position: relative
+    bottom: 22px
+    width: 30px
+    height: 30px
+    margin-right: 20px
+    fill: orange
+
+
+.timeline__item__h
+    color: #020710
+    font-size: 1rem
+    text-transform: uppercase
+    font-weight: 700
+    margin-bottom: 10px
+
+.timeline__item__p
+    margin-bottom: 0
+    color: #020710
+    font-size: 13px
+    text-transform: uppercase
+    font-weight: 500
+    line-height: 1.2
+
+
+.timeline__data
+    position: absolute
+    left: -80px
+    font-weight: 800
+    
+
+
+    
+
+
+
+
+    
+
+    
+
