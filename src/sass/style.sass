@@ -6,6 +6,7 @@ body
     font-family: 'DM sans', sans-serif
     margin: 0 auto
     background-color: black
+    box-sizing: border-box
     
     
 
@@ -113,8 +114,6 @@ body
     margin: 0 auto
     background-color: black
     display: flex
-    // padding: 5% 0 5% 0
-    // flex-direction: row
     justify-content: center
     align-items: center
     
@@ -138,10 +137,8 @@ body
  
 
 .card
-    width:  auto
-    
+    width:  auto 
     height: 500px
-    // border: 3px white solid
     border-radius: 45px
     overflow: hidden
     box-shadow: 0 0 50px rgba(251, 138, 79, 0.7)
@@ -191,16 +188,6 @@ body
     left: calc( 50% - 90px )
     bottom: calc( 100% - 90px )
 
-    // position: absolute
-    
-    // height: auto
-    // width: 33%
-    // max-width: 180px
-    // border-radius: 50%
-    // overflow: hidden
-    // transform: translate(-50% -50%)
-    // left: 33.33%
-    // bottom: 80%
     
 
 .circle__pic
@@ -227,39 +214,7 @@ body
     justify-content: center
 
 
-// .timeline__item
-//     font-size: 50px
-//     color: white
-//     font-weight: 700
-//     line-height: 2.5
-//     text-shadow: 0px 0px 10px rgba(251, 186, 5, 0.704)
-//     height: 150px
-//     width: 200px
-//     border: 1px solid white
 
-// .timeline__item:hover
-//     font-size: 52px 
-    
-
-// .timeline__item:hover:before
-//     height: 42px
-//     width: 42px
-//     background-size: 27px 27px
-
-// .timeline__item:before
-//     content: ""
-//     background-image: url('/src/icons/check-lg.svg')
-//     background-size: 25px 25px
-//     background-position: center
-//     background-repeat: no-repeat
-//     height: 40px
-//     width: 40px
-//     border-radius: 50%
-//     background-color: orange
-//     box-shadow: -2px 2px 4px orange
-//     -webkit-box-shadow: -2px 2px 4px orange
-//     display: inline-block
-//     margin-right: 250px
     
 
 
@@ -267,8 +222,6 @@ body
     width: 3px
     height: 100%
     background: #ebebeb
-    // box-shadow: -2px 2px 6px rgb(182, 182, 180)
-    // -webkit-box-shadow: -2px 2px 6px rgb(167, 168, 165)
     border-radius: 10px
     position: absolute
     left: 6px
@@ -278,36 +231,21 @@ body
     
     
 
-.timeline__arrow:after
-    content: ''
-    color: rgba(212, 250, 59, 0.7)
-    width: 10px
-    height: 10px
+// .timeline__arrow:after
+//     content: ''
+//     color: rgba(212, 250, 59, 0.7)
+//     width: 10px
+//     height: 10px
 
 
 
-
-// .timeline__items
-//     position: absolute
-//     left: calc( 20% - 15px )
-//     top: calc(12.5% - 60px)
-
-// .arrow
-//     height: 100%
-//     width: 100%
-//     background-color: red
 
 .timeline__items
-    // height: auto
-    // width: auto
-    display: flex
-    flex-direction: column
-    // border: 1px solid white
-    position: absolute
-    left: 14.7%
-    top: 9%
-    padding: 30px 0px 0px 0px 
-    justify-content: center
+    position: relative
+    align-self: center
+    left: 50px
+    
+    
     
     
 .timeline__items__container
@@ -316,29 +254,34 @@ body
     display: flex
     align-items: center
     margin-bottom: 40px
+    margin-left: 50px
+    
+
+.timeline__items__container:last-child
+    margin-bottom: 0
     
     
     
-.timeline__items__container:before
-    content: ""
+// // .timeline__items__container:before
+//     content: ""
     
-    background-size: 8px 8px
-    background-position: center
-    background-repeat: no-repeat
-    height: 15px
-    width: 15px
-    border-radius: 50%
-    background-color: rgb(248, 195, 79)
-    margin-right: 40px
-    position: relative
+//     background-size: 8px 8px
+//     background-position: center
+//     background-repeat: no-repeat
+//     height: 15px
+//     width: 15px
+//     border-radius: 50%
+//     background-color: rgb(248, 195, 79)
+//     margin-right: 40px
+//     position: relative
     
     
 
 
 
 .timeline__item
-    height: 90px
-    width: 290px
+    height: auto
+    width: 15vw
     border: 1px solid white
     border-radius: 10px
     background-color: rgba(255, 255, 255, 0.995)
@@ -351,6 +294,10 @@ body
     align-items: center
     justify-content: space-between
     transition: all 0.4s ease 0s
+    
+
+.timeline__item:last-child
+    margin: 0
 
 .timeline__item:hover
     box-shadow: 0 0.25rem 1rem 0.5rem rgba(47, 91, 234, 0.125)
@@ -367,7 +314,7 @@ body
 
 .timeline__item__h
     color: #020710
-    font-size: 1rem
+    font-size: 1.2rem
     text-transform: uppercase
     font-weight: 700
     margin-bottom: 10px
@@ -375,7 +322,7 @@ body
 .timeline__item__p
     margin-bottom: 0
     color: #020710
-    font-size: 13px
+    font-size: 0.9rem
     text-transform: uppercase
     font-weight: 500
     line-height: 1.2
@@ -385,12 +332,30 @@ body
     position: absolute
     left: -80px
     font-weight: 800
+    font-size: 1.2em
+    text-transform: uppercase
     
 
+@media ( max-width: 767px )
+    .timeline__items__container
+        flex-direction: column
 
+    .timeline__item
+        
     
 
+.timeline__data:after
+    content: ""
+    width: 15px
+    height: 15px
+    border-radius: 50%
+    position: relative
+    background-color: rgb(248, 195, 79)
+    background-size: 10px 10px 
 
+
+
+        
 
 
     

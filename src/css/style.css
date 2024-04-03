@@ -395,6 +395,7 @@ body {
   font-family: 'DM sans', sans-serif;
   margin: 0 auto;
   background-color: black;
+  box-sizing: border-box;
 }
 
 .hero_section {
@@ -615,21 +616,10 @@ body {
   top: 0;
 }
 
-.timeline__arrow:after {
-  content: '';
-  color: rgba(212, 250, 59, 0.7);
-  width: 10px;
-  height: 10px;
-}
-
 .timeline__items {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  left: 14.7%;
-  top: 9%;
-  padding: 30px 0px 0px 0px;
-  justify-content: center;
+  position: relative;
+  align-self: center;
+  left: 50px;
 }
 
 .timeline__items__container {
@@ -638,24 +628,16 @@ body {
   display: flex;
   align-items: center;
   margin-bottom: 40px;
+  margin-left: 50px;
 }
 
-.timeline__items__container:before {
-  content: "";
-  background-size: 8px 8px;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 15px;
-  width: 15px;
-  border-radius: 50%;
-  background-color: #f8c34f;
-  margin-right: 40px;
-  position: relative;
+.timeline__items__container:last-child {
+  margin-bottom: 0;
 }
 
 .timeline__item {
-  height: 90px;
-  width: 290px;
+  height: auto;
+  width: 15vw;
   border: 1px solid white;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.995);
@@ -668,6 +650,10 @@ body {
   align-items: center;
   justify-content: space-between;
   transition: all 0.4s ease 0s;
+}
+
+.timeline__item:last-child {
+  margin: 0;
 }
 
 .timeline__item:hover {
@@ -686,7 +672,7 @@ body {
 
 .timeline__item__h {
   color: #020710;
-  font-size: 1rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
   font-weight: 700;
   margin-bottom: 10px;
@@ -695,7 +681,7 @@ body {
 .timeline__item__p {
   margin-bottom: 0;
   color: #020710;
-  font-size: 13px;
+  font-size: 0.9rem;
   text-transform: uppercase;
   font-weight: 500;
   line-height: 1.2;
@@ -705,4 +691,22 @@ body {
   position: absolute;
   left: -80px;
   font-weight: 800;
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 767px) {
+  .timeline__items__container {
+    flex-direction: column;
+  }
+}
+
+.timeline__data:after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: relative;
+  background-color: #f8c34f;
+  background-size: 10px 10px;
 }
