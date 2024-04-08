@@ -617,15 +617,15 @@ body {
 }
 
 .timeline__point {
-  background-size: 8px 8px;
-  background-position: center;
-  background-repeat: no-repeat;
   height: 24px;
   width: 24px;
   border-radius: 50%;
   background-color: #f8c34f;
   position: absolute;
   left: -72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .time__point1:before {
