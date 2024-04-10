@@ -771,7 +771,7 @@ body {
     margin-left: 30px;
   }
   .timeline__items__container {
-    margin-left: 0px;
+    margin-left: 15px;
   }
   .timeline__point {
     position: relative;
@@ -810,8 +810,11 @@ body {
   position: relative;
   display: flex;
   transition: all 0.4s ease 0s;
-  margin: 0;
   align-items: center;
+}
+
+.container-fluid {
+  padding: 0;
 }
 
 @media screen and (max-width: 992px) {
@@ -834,15 +837,14 @@ body {
 .radar__area__left {
   min-width: 33.33%;
   height: 1083px;
-  border: 1px solid black;
   float: left;
   position: relative;
+  background-image: linear-gradient(315deg, #f18a4f 0%, #ffcf53 79%);
 }
 
 .radar__area__right {
   min-width: 66.66%;
   height: auto;
-  border: 1px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -875,7 +877,7 @@ body {
 .radar__sweep {
   position: absolute;
   animation: spin 8s linear infinite;
-  height: 84%;
+  height: 83.2%;
 }
 
 @keyframes spin {
