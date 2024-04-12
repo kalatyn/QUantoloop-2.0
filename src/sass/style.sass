@@ -125,6 +125,12 @@ body
     .cardfield
         flex-direction: column
         padding: 80px 0
+    .card
+        width: 500px
+
+@media ( max-width: 767px )
+    .card
+        width: 380px
     
         
     
@@ -132,16 +138,17 @@ body
  
 
 .card
-    width:  auto
+    
     max-width: 500px
     height: 500px
     border-radius: 45px
     overflow: hidden
     box-shadow: 0 0 50px rgba(251, 138, 79, 0.7)
     -webkit-box-shadow: 0 0 50px rgba(251, 138, 79, 0.7)
-    transition: all 0.8s ease 0s
+    transition: all 0.6s ease-out 0s
+    position: relative
     margin: 2.5%
-    display: flex
+    display: inline
     
 
 
@@ -163,6 +170,7 @@ body
     object-position: center
     object-fit: cover
     height: 100%
+    
 
 
 .card__bottom
@@ -172,7 +180,8 @@ body
     background-color: #f18a4f
     background-image: linear-gradient(315deg, #f18a4f 0%, #ffcf53 79%)
     bottom: -100%
-    transition: all 0.6s ease 0s
+    box-shadow: 0 0 50px black
+    transition: all 0.6s ease-out 0s
 
 .card:hover .card__bottom
     bottom: 66.6%    
@@ -201,7 +210,6 @@ body
 .card:hover .card__circle
     height: 90px
     width: 90px
-    align-self: center
     top: calc( 33.3% - 45px )
     left: calc( 50% - 45px )
     background-color: rgba(255, 255, 255, 1)
@@ -232,10 +240,7 @@ body
     display: flex
     align-items: center
     justify-content: center
-
-
-
-//  -----------------------------------   
+ 
 
 
 .timeline__arrow
@@ -350,8 +355,8 @@ body
     transition: all 0.4s ease 0s
     margin-bottom: 40px
 
-.timeline__item:last-child
-    margin-right: 0
+// .timeline__item:last-child
+//     margin-right: 0
 
 .timeline__item:hover
     scale: 1.1
@@ -395,6 +400,8 @@ body
 @media screen and ( max-width: 1400px )
     .timeline__container
         width: 1201px
+    .timeline__item
+        width: 44%
     
 @media screen and ( max-width: 1200px )
     .timeline__container
@@ -419,7 +426,7 @@ body
         margin: 50px auto
         padding: 0 15px
     .timeline__item
-        width: 100%
+        width: 90%
         margin-right: 10px 
         margin-left: 30px
 
