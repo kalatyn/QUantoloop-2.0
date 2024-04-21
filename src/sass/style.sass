@@ -5,15 +5,25 @@
 body
     font-family: 'DM sans', sans-serif
     margin: 0 auto
-    background-color: black
+    background-color: white
     box-sizing: border-box
+    scroll-snap-type: y madatory
+    transition: all 0.7s ease 0s
     
-    
+.section
+    width: 80%
+    transition: all 1.5s ease 0s
+    margin: 0 auto
 
 
-.hero_section
+.section.transform
     height: 100vh
     width: 100%
+    margin: 0 auto
+    transition: all 1s ease 0s
+    
+
+
 
 .video_wrapper
     position: relative
@@ -27,13 +37,13 @@ body
     align-items: center
     flex-wrap: wrap
 
-.layout
-    position: absolute
-    width: 100%
-    height: 100vh
-    left: 0
-    top: 0
-    background: rgba(0, 0, 0, 0.6)
+// .layout
+//     position: absolute
+//     width: 100%
+//     height: 100vh
+//     left: 0
+//     top: 0
+//     background: rgba(0, 0, 0, 0.6)
 
 .video_backgroud
     
@@ -106,7 +116,7 @@ body
     min-height: 100vh
     max-width: 100vw
     margin: 0 auto
-    background-color: black
+    background-color: white
     display: flex
     justify-content: center
     align-items: center
@@ -177,15 +187,77 @@ body
     position: relative
     width: 100%
     height: 75%
-    background-color: #f18a4f
-    background-image: linear-gradient(315deg, #f18a4f 0%, #ffcf53 79%)
+    background-image: linear-gradient(315deg, #f18a4f33 0%, #ffce533f 79%)
     bottom: -100%
     box-shadow: 0 0 50px black
     transition: all 0.6s ease-out 0s
+    color: white
+
+.more__about
+    position: absolute
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    background-color: rgba(255, 255, 255, 0.63)
+    right: 7%
+    bottom: 20%
+    z-index: 3
+    color: black
+    font-size: 3em
+    text-align: center
+    cursor: pointer
+
 
 .card:hover .card__bottom
-    bottom: 66.6%    
+    bottom: 66.6%   
+
+.card__disc
+    width: 100%
+    height: 100%
+    position: absolute
+    z-index: 4
+    display: flex
+    justify-content: center
+    align-items: center
+    visibility: hidden
+    background-color: rgba(0, 0, 0, 0.5)
+    transition: visibility 0,5s
+
+.about
+    position: absolute 
+    width: 60%
+    height: auto
+    z-index: 5
+    font-size: 1.5em
+    text-align: center
+    line-height: 1.5em
+    padding: 40px
+    border: 1px solid white
+    border-radius: 10px
+    background-color: white
     
+
+.card__disc.show
+    visibility: visible
+    
+.exit__button
+    position: absolute
+    width: 25px
+    height: 25px
+    border-radius: 50%
+    background-color: rgba(157, 153, 153, 0.63)
+    left: 1%
+    top: 3%
+    z-index: 2
+    color: black
+    font-size: 0.8em
+    cursor: pointer
+    display: flex
+    justify-content: center
+    align-items: center
+
+.exit__button p
+
 
 
 .card__circle
@@ -223,7 +295,7 @@ body
     
 
 .card__text
-    font-size: 26px
+    font-size: 22px
     font-weight: 700
     text-align: center
     line-height: 1.7
@@ -240,6 +312,7 @@ body
     display: flex
     align-items: center
     justify-content: center
+    margin: 0 auto
  
 
 
@@ -490,12 +563,12 @@ body
         height: 90vw
         width: 90vw
 
+
     
     
 .radar__area__left
     min-width: 33.33%
     height: 1083px
-    // border: 1px solid black
     float: left
     position: relative
     background-image: linear-gradient(315deg, #f18a4f 0%, #ffcf53 79%)
@@ -503,7 +576,6 @@ body
 .radar__area__right
     min-width: 66.66%
     height: auto
-    // border: 1px solid black
     display: flex
     justify-content: center
     align-items: center
@@ -540,10 +612,6 @@ body
     position: absolute
     padding: none
     display: flex
-
-    // background-image: url('../img/radar-sweep.png')
-    // background-size: cover
-    // animation: spin 3s linear infinite
 
 .radar__sweep
     position: absolute
