@@ -14,6 +14,7 @@ body
     width: 80%
     transition: all 1.5s ease 0s
     margin: 0 auto
+    border-radius: 20px
 
 
 .section.transform
@@ -21,7 +22,10 @@ body
     width: 100%
     margin: 0 auto
     transition: all 1s ease 0s
-    
+    border-radius: 0px
+
+.hero_section
+    overflow: hidden
 
 
 
@@ -45,7 +49,7 @@ body
 //     top: 0
 //     background: rgba(0, 0, 0, 0.6)
 
-.video_backgroud
+.video_background
     
     height: 100vh
     width: 100vw
@@ -146,12 +150,15 @@ body
     
 
  
+.scroll-lock
+    overflow: hidden
+
 
 .card
     
     max-width: 500px
     height: 500px
-    border-radius: 45px
+    border-radius: 20px
     overflow: hidden
     box-shadow: 0 0 50px rgba(251, 138, 79, 0.7)
     -webkit-box-shadow: 0 0 50px rgba(251, 138, 79, 0.7)
@@ -242,10 +249,7 @@ body
     
 .exit__button
     position: absolute
-    width: 25px
-    height: 25px
-    border-radius: 50%
-    background-color: rgba(157, 153, 153, 0.63)
+    
     left: 1%
     top: 3%
     z-index: 2
@@ -256,7 +260,6 @@ body
     justify-content: center
     align-items: center
 
-.exit__button p
 
 
 
@@ -306,33 +309,43 @@ body
 
 .timeline__area
     width: 100%
-    min-height: 100vh
+    height: auto
     position: relative
     background-color: white
     display: flex
     align-items: center
     justify-content: center
     margin: 0 auto
+    padding: 100px 40px
  
-
+#timeline__info
+  position: fixed
+  bottom: -100px
+  left: 0
+  right: 0
+  margin: 0 auto 
+  width: 50px
+  height: 50px
+  border-radius: 50%
+  color: #38393991
+  cursor: pointer
+  z-index: 1000
+  transition: all 0.5s ease 
+  font-size: 2.5em
+  display: flex
+  justify-content: center
+  align-items: center
+    
 
 .timeline__arrow
     width: 3px
-    height: 98%
+    height: 90%
     background: #ebebeb
     border-radius: 10px
     position: absolute
     left: 188px
     top: 0
 
-    
-    
-    
-
-
-    
-    
-    
 .timeline__items__container
     height: auto
     width: auto
@@ -476,6 +489,7 @@ body
     .timeline__item
         width: 44%
     
+    
 @media screen and ( max-width: 1200px )
     .timeline__container
         width: 993px
@@ -483,6 +497,7 @@ body
         width: 44%
     .timeline__items__container
         margin-bottom: 70px
+    
 
 
 @media screen and ( max-width: 992px )
@@ -550,11 +565,12 @@ body
 
 @media screen and ( max-width: 992px )
     .radar__area
-        flex-direction: column-reverse
+        flex-direction: row
         align-items: center
 
     .radar__area__left
         width: 100%
+        height: 100%
 
     .radar__area__right
         width: 100%
@@ -568,7 +584,7 @@ body
     
 .radar__area__left
     min-width: 33.33%
-    height: 1083px
+    height: 100vh
     float: left
     position: relative
     background-image: linear-gradient(315deg, #f18a4f 0%, #ffcf53 79%)
@@ -586,8 +602,8 @@ body
 
 
 .radar
-    min-height: 40vw
-    min-width: 40vw
+    height: 40vw
+    width: 40vw
     // min-width: 600px
     // min-height: 600px
     border: 1px solid white
@@ -641,8 +657,5 @@ body
     justify-content: center
 
 
-
-    
-    
 
 
