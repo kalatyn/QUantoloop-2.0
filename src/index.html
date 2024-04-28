@@ -140,15 +140,12 @@
 
     <script>
  window.addEventListener('scroll', function() {
-    let scrollPosition = window.scrollY; // Получаем значение прокрутки по вертикали
-    let element = document.querySelector('#hero_section'); // Находим элемент
+    let scrollPosition = window.scrollY; 
+    let element = document.querySelector('#hero_section'); 
 
-    // Вычисляем новые размеры элемента в зависимости от значения прокрутки
-    let newSize = 106 - scrollPosition * 0.01; // Примерный расчет, можно настроить под ваши нужды
-
-    // Применяем новые размеры к элементу
+    let newSize = 106 - scrollPosition * 0.01; 
     element.style.width = newSize + '%';
-    // element.stile.border-radius = '20px';
+    
 });
     </script>
     <script>
